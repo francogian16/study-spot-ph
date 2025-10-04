@@ -1,0 +1,341 @@
+/* Add Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0077B6;
+  --secondary-color: #00B4D8;
+  --accent-color: #CAF0F8;
+  --bg-color: #F8F9FA;
+  --text-color: #212529;
+  --card-bg: #FFFFFF;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 70px; /* Header height */
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 2rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.header nav a.active {
+  color: var(--primary-color);
+}
+.auth-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Hero Section & Search */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+.hero-section h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+.search-bar {
+  width: 60%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+/* Space Grid & Card */
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.space-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.space-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-content h3 {
+  margin-top: 0;
+}
+.card-content .location {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+.card-content .price {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.view-btn {
+  display: block;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Detail Page */
+.detail-page .detail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.detail-main-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+.detail-page h1 {
+  margin-bottom: 0.5rem;
+}
+.detail-page .location {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+.detail-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+.amenities-list {
+  list-style: '✓ ';
+  padding-left: 1.5rem;
+}
+.booking-form-container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 90px;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.form-group select, .date-picker {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+.book-now-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Dashboard */
+.dashboard h1 { text-align: center; }
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.booking-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+.booking-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+.booking-details {
+  flex-grow: 1;
+}
+.booking-details h4 { margin: 0; }
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e9ecef;
+  margin-top: 2rem;
+}
+
+/* --- Modal Styles --- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* Ensure it's on top of everything */
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.modal-body {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Reusable Button Styles */
+.modal-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Rename the old .cancel-btn to be more specific if needed, or just reuse .btn-danger */
+/* For consistency, let's update the dashboard cancel button style */
+.dashboard .booking-card .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
