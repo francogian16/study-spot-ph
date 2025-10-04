@@ -25,7 +25,7 @@ function HomePage() {
   return (
     <div className="page-content">
       <div className="hero-section">
-        <h1>Find Your Perfect Study Spot</h1>
+        <h1>Find Your Perfect Study Spot V2</h1>
         <p>
           Discover and book co-working spaces and study hubs across the
           Philippines.
